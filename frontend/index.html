@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dynasty Manager</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="panel">
+    <h1>Rogue Trader Dynasty Manager</h1>
+
+    <button onclick="newDynasty()">New Dynasty</button>
+    <button onclick="loadDynasty()">Load Dynasty</button>
+    <button onclick="copyDynasty()">Copy Dynasty</button>
+    <button onclick="deleteDynasty()">Delete Dynasty</button>
+
+    <h2>Existing Dynasties</h2>
+    <ul id="dynastyList"></ul>
+  </div>
+
+  <script src="js/api.js"></script>
+  <script src="js/dynasties.js"></script>
+</body>
+</html>

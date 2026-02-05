@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="panel">
+    <h1>Characters</h1>
+
+    <input id="name" placeholder="Name">
+    <input id="homeworld" placeholder="Homeworld">
+    <input id="career" placeholder="Career">
+    <button onclick="createCharacter()">Add Character</button>
+
+    <h2>Character List</h2>
+    <ul id="charList"></ul>
+
+    <button onclick="location.href='dashboard.html'">Back</button>
+  </div>
+
+  <script src="js/api.js"></script>
+  <script src="js/characters.js"></script>
+</body>
+</html>
