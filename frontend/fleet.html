@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Fleet Manager</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="panel">
+    <h1>Fleet Management</h1>
+
+    <div id="fleetList" class="section">
+        Loading ships...
+    </div>
+
+    <hr>
+    
+    <div class="section" style="text-align:center;">
+        <button onclick="createShip()">Create Ship</button>
+        <button onclick="loadShip()">Load Ship</button>
+        <button onclick="copyShip()">Copy Ship</button>
+        <button onclick="deleteShip()">Delete Ship</button>
+    </div>
+
+    <hr>
+    <button onclick="location.href='dashboard.html'">⬅ Back to Dashboard</button>
+</div>
+
+<script src="js/api.js"></script>
+<script src="js/fleet.js"></script>
+</body>
+</html>

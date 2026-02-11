@@ -13,5 +13,5 @@ class Ship(Base):
     __tablename__ = "ships"
     id = Column(Integer, primary_key=True)
     name = Column(String)
-    hull_type = Column(String)
+    hull_type = Column(String, default="Unassigned")
     hull_integrity = Column(Integer)
