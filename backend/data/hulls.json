@@ -1,5 +1,4 @@
-HULL_TEMPLATES = {
-
+{
     "Armageddon": {
         "hull_type": "Ship of the Line",
         "category": "Battlecruiser",
@@ -19,7 +18,6 @@ HULL_TEMPLATES = {
         "weapon_capacity": "1 Prow, 2 Port, 2 Starboard, 1 Dorsal",
         "special": "Can use Cruiser Only Components; Only Stock 3 Months Supplies"
     },
-
     "Overlord": {
         "hull_type": "Ship of the Line",
         "category": "Battlecruiser",
@@ -39,7 +37,6 @@ HULL_TEMPLATES = {
         "weapon_capacity": "1 Prow, 2 Port, 2 Starboard, 1 Dorsal",
         "special": "Can use Cruiser Only Components"
     },
-
     "Mars": {
         "hull_type": "Ship of the Line",
         "category": "Battlecruiser",
@@ -59,7 +56,6 @@ HULL_TEMPLATES = {
         "weapon_capacity": "1 Prow, 2 Port, 2 Starboard, 1 Dorsal",
         "special": "2 Jovian Lance Batteries"
     },
-
     "Chalice": {
         "hull_type": "Strike Cruiser",
         "category": "Grand Cruiser",
@@ -79,7 +75,6 @@ HULL_TEMPLATES = {
         "weapon_capacity": "1 Prow, 2 Port, 2 Starboard, 1 Dorsal",
         "special": "Additional Plasma Conduits"
     },
-
     "Ambition": {
         "hull_type": "Grand Cruiser",
         "category": "Cruiser",
@@ -99,7 +94,6 @@ HULL_TEMPLATES = {
         "weapon_capacity": "1 Prow, 2 Port, 2 Starboard",
         "special": "-"
     },
-
     "Lunar": {
         "hull_type": "Cruiser",
         "category": "Imperial",
@@ -119,7 +113,6 @@ HULL_TEMPLATES = {
         "weapon_capacity": "1 Prow, 2 Port, 2 Starboard",
         "special": "Balanced weapons layout"
     },
-
     "Tyrant": {
         "hull_type": "Cruiser",
         "category": "Imperial",
@@ -139,7 +132,6 @@ HULL_TEMPLATES = {
         "weapon_capacity": "1 Prow, 2 Port, 2 Starboard",
         "special": "Enhanced long-range targeting"
     },
-
     "Gothic": {
         "hull_type": "Cruiser",
         "category": "Imperial",
@@ -159,7 +151,6 @@ HULL_TEMPLATES = {
         "weapon_capacity": "1 Prow, 2 Port, 2 Starboard",
         "special": "Optimized for lance warfare"
     },
-
     "Dictator": {
         "hull_type": "Cruiser",
         "category": "Imperial",
@@ -179,7 +170,6 @@ HULL_TEMPLATES = {
         "weapon_capacity": "1 Prow, 2 Port, 2 Starboard, 1 Dorsal",
         "special": "Carries attack craft"
     },
-
     "Dominator": {
         "hull_type": "Cruiser",
         "category": "Imperial",
@@ -199,7 +189,6 @@ HULL_TEMPLATES = {
         "weapon_capacity": "1 Prow, 2 Port, 2 Starboard",
         "special": "Nova cannon capable"
     },
-
     "Exorcist": {
         "hull_type": "Cruiser",
         "category": "Imperial",
@@ -219,7 +208,6 @@ HULL_TEMPLATES = {
         "weapon_capacity": "1 Prow, 2 Port, 2 Starboard, 1 Dorsal",
         "special": "Improved armour distribution"
     },
-
     "Dauntless": {
         "hull_type": "Light Cruiser",
         "category": "Imperial",
@@ -239,7 +227,6 @@ HULL_TEMPLATES = {
         "weapon_capacity": "1 Prow, 1 Port, 1 Starboard",
         "special": "Fast attack vessel"
     },
-
     "Endeavour": {
         "hull_type": "Light Cruiser",
         "category": "Rogue Trader",
@@ -259,7 +246,6 @@ HULL_TEMPLATES = {
         "weapon_capacity": "1 Prow, 1 Port, 1 Starboard",
         "special": "Extra cargo capacity"
     },
-
     "Defiant": {
         "hull_type": "Light Cruiser",
         "category": "Rogue Trader",
@@ -279,7 +265,6 @@ HULL_TEMPLATES = {
         "weapon_capacity": "1 Prow, 1 Port, 1 Starboard",
         "special": "Improved armor for its class"
     },
-
     "Falchion": {
         "hull_type": "Light Cruiser",
         "category": "Imperial",
@@ -299,7 +284,6 @@ HULL_TEMPLATES = {
         "weapon_capacity": "1 Prow, 1 Port, 1 Starboard",
         "special": "High-speed patrol craft"
     },
-
     "Viper": {
         "hull_type": "Light Cruiser",
         "category": "Imperial",
@@ -319,7 +303,6 @@ HULL_TEMPLATES = {
         "weapon_capacity": "1 Prow, 1 Port, 1 Starboard",
         "special": "Long-range patrol sensors"
     },
-
     "Iconoclast": {
         "hull_type": "Raider",
         "category": "Chaos/Independent",
@@ -339,7 +322,6 @@ HULL_TEMPLATES = {
         "weapon_capacity": "1 Prow, 1 Port",
         "special": "Extremely agile raider"
     },
-
     "Infidel": {
         "hull_type": "Raider",
         "category": "Chaos/Independent",
@@ -359,7 +341,6 @@ HULL_TEMPLATES = {
         "weapon_capacity": "1 Prow, 1 Port",
         "special": "Heavy raider armament"
     },
-
     "Havoc": {
         "hull_type": "Raider",
         "category": "Chaos/Independent",
@@ -379,7 +360,6 @@ HULL_TEMPLATES = {
         "weapon_capacity": "1 Prow, 1 Port, 1 Starboard",
         "special": "Carries torpedo payloads"
     },
-
     "Acheron": {
         "hull_type": "Raider",
         "category": "Chaos/Independent",
@@ -399,7 +379,6 @@ HULL_TEMPLATES = {
         "weapon_capacity": "1 Prow, 1 Port, 1 Starboard",
         "special": "Balanced raider platform"
     },
-
     "Sword": {
         "hull_type": "Frigate",
         "category": "Imperial Escort",
@@ -419,7 +398,6 @@ HULL_TEMPLATES = {
         "weapon_capacity": "1 Prow",
         "special": "Fast escort frigate"
     },
-
     "Firestorm": {
         "hull_type": "Frigate",
         "category": "Imperial Escort",
@@ -439,7 +417,6 @@ HULL_TEMPLATES = {
         "weapon_capacity": "1 Prow",
         "special": "Equipped with lance weaponry"
     },
-
     "Falchion Escort": {
         "hull_type": "Escort",
         "category": "Imperial Escort",
@@ -459,7 +436,6 @@ HULL_TEMPLATES = {
         "weapon_capacity": "1 Prow",
         "special": "High-speed patrol escort"
     },
-
     "Cobra": {
         "hull_type": "Destroyer Escort",
         "category": "Imperial Escort",
@@ -479,7 +455,6 @@ HULL_TEMPLATES = {
         "weapon_capacity": "1 Prow",
         "special": "Torpedo destroyer"
     },
-
     "Widowmaker": {
         "hull_type": "Escort",
         "category": "Chaos Escort",
@@ -499,7 +474,6 @@ HULL_TEMPLATES = {
         "weapon_capacity": "1 Prow",
         "special": "Fast attack escort"
     },
-
     "Orion": {
         "hull_type": "Transport",
         "category": "Civilian",
@@ -519,7 +493,6 @@ HULL_TEMPLATES = {
         "weapon_capacity": "1 Prow",
         "special": "Massive cargo capacity"
     },
-
     "Universe": {
         "hull_type": "Heavy Transport",
         "category": "Civilian",
@@ -539,7 +512,6 @@ HULL_TEMPLATES = {
         "weapon_capacity": "1 Prow",
         "special": "Colossal cargo hauler"
     },
-
     "Goliath": {
         "hull_type": "Mass Conveyor",
         "category": "Industrial",
@@ -559,7 +531,6 @@ HULL_TEMPLATES = {
         "weapon_capacity": "None",
         "special": "Immense bulk transport"
     },
-
     "Lathe": {
         "hull_type": "Exploration Cruiser",
         "category": "Adeptus Mechanicus",
@@ -579,7 +550,6 @@ HULL_TEMPLATES = {
         "weapon_capacity": "1 Prow, 2 Port, 2 Starboard",
         "special": "Advanced augur arrays"
     },
-
     "Vagabond": {
         "hull_type": "Rogue Trader Cruiser",
         "category": "Rogue Trader",
@@ -599,7 +569,6 @@ HULL_TEMPLATES = {
         "weapon_capacity": "1 Prow, 2 Port, 2 Starboard",
         "special": "Versatile long-range trader"
     },
-
     "Pathfinder": {
         "hull_type": "Rogue Trader Light Cruiser",
         "category": "Rogue Trader",
@@ -619,5 +588,4 @@ HULL_TEMPLATES = {
         "weapon_capacity": "1 Prow, 1 Port, 1 Starboard",
         "special": "Enhanced exploration sensors"
     }
-
 }

@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Fleet Manager</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="tablepanel">
+    <h1>Ship Customization</h1>
+    
+    <hr>
+
+    <img src="../backend/images/ship_images/Ambition.png" alt="Error Loading Ship Model Image" >
+    
+    <hr>
+    <h3>Voidship Stats</h3>
+    <table style="width:100%">
+        <tr>
+            <th>Voidship Name:</th>
+            <td>Variable</td>
+        </tr>
+        <tr>
+            <th>Hull:</th>
+            <td>
+                <select id="hullSelect" onchange="loadHullData()">
+                    <option value="">-- Select Hull --</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <th>Class:</th>
+            <td>Variable</td>
+        </tr>
+        <tr>
+            <th>Dimensions:</th>
+            <td>Variable</td>
+        </tr>
+        <tr>
+            <th>Mass:</th>
+            <td>Variable</td>
+        </tr>
+        <tr>
+            <th>Crew:</th>
+            <td>Variable</td>
+        </tr>
+        <tr>
+            <th>Accelaration:</th>
+            <td>Variable</td>
+        </tr>
+        <tr>
+            <th></th>
+        </tr>
+        <tr>
+            <th>Speed:</th>
+            <td>Variable</td>
+            <th>Manoeuvrability:</th>
+            <td>Variable</td>
+            <th>Detection:</th>
+            <td>Variable</td>
+        </tr>
+        <tr>
+            <th>Void Shields:</th>
+            <td>Variable</td>
+            <th>Armour:</th>
+            <td>Variable</td>
+            <th>Hull Integrity:</th>
+            <td>Variable</td>
+        </tr>
+        <tr>
+            <th>Morale:</th>
+            <td>Variable</td>
+            <th>Crew Population:</th>
+            <td>Variable</td>
+            <th>Crew:</th>
+            <td>Variable</td>
+        </tr>
+        <tr>
+            <th>Turret Rating:</th>
+            <td>Variable</td>
+            <th>Weapon Capacity:</th>
+            <td colspan="3">Variable</td>
+        </tr>
+        <tr>
+            <th>Space:</th>
+            <td>Variable</td>
+            <th>Power:</th>
+            <td>Variable</td>
+            <th>Ship Points:</th>
+            <td>Variable</td>
+        </tr>
+        <tr>
+            <th></th>
+        </tr>
+        <tr>
+            <th>Endeavours Bonus:</th>
+            <td>+Variable Military</td>
+            <td>+Variable Criminal</td>
+            <td>+Variable Exploration</td>
+            <td>+Variable Trade</td>
+            <td>+Variable Creed</td>
+        </tr>
+    </table>
+
+    <hr>
+
+    <table style="width:100%">
+        <tr>
+            <th>Essential Components</th>
+            <th>Name</th>
+            <th>Power</th>
+            <th>Space</th>
+            <th>Ship Points</th>
+        </tr>
+        <tr>
+            <th>Plasma Drive:</th>
+            <td>Variable</td>
+            <td>Power</td>
+            <td>Space</td>
+            <td>Ship Points</td>
+        </tr>
+        <tr>
+            <th>Warp Drive:</th>
+            <td>Variable</td>
+            <td>Power</td>
+            <td>Space</td>
+            <td>Ship Points</td>
+        </tr>
+        <tr>
+            <th>Gellar Field:</th>
+            <td>Variable</td>
+            <td>Power</td>
+            <td>Space</td>
+            <td>Ship Points</td>
+        </tr>
+        <tr>
+            <th>Void Shields:</th>
+            <td>Variable</td>
+            <td>Power</td>
+            <td>Space</td>
+            <td>Ship Points</td>
+        </tr>
+        <tr>
+            <th>Ships Bridge:</th>
+            <td>Variable</td>
+            <td>Power</td>
+            <td>Space</td>
+            <td>Ship Points</td>
+        </tr>
+        <tr>
+            <th>Life Sustainers:</th>
+            <td>Variable</td>
+            <td>Power</td>
+            <td>Space</td>
+            <td>Ship Points</td>
+        </tr>
+        <tr>
+            <th>Crew Quarters:</th>
+            <td>Variable</td>
+            <td>Power</td>
+            <td>Space</td>
+            <td>Ship Points</td>
+        </tr>
+        <tr>
+            <th>Augur Arrays:</th>
+            <td>Variable</td>
+            <td>Power</td>
+            <td>Space</td>
+            <td>Ship Points</td>
+        </tr>
+    </table>  
+    
+    <hr>
+
+    <h3>Armament and Ordnance</h3>
+    <table style="width:100%">
+        <tr>
+            <th></th>
+            <td></td>
+        </tr>
+        <tr>
+            <th></th>
+            <td></td>
+        </tr>
+        <tr>
+            <th></th>
+            <td></td>
+        </tr>
+        <tr>
+            <th></th>
+            <td></td>
+        </tr>
+        <tr>
+            <th></th>
+            <td></td>
+        </tr>
+        <tr>
+            <th></th>
+            <td></td>
+        </tr>
+        <tr>
+            <th></th>
+            <td></td>
+        </tr>
+        <tr>
+            <th></th>
+            <td></td>
+        </tr>
+    </table>  
+    
+    <hr>
+
+    <h3>Supplemental Components</h3>
+    <table style="width:100%">
+        <tr>
+            <th></th>
+            <td></td>
+        </tr>
+        <tr>
+            <th></th>
+            <td></td>
+        </tr>
+        <tr>
+            <th></th>
+            <td></td>
+        </tr>
+        <tr>
+            <th></th>
+            <td></td>
+        </tr>
+        <tr>
+            <th></th>
+            <td></td>
+        </tr>
+        <tr>
+            <th></th>
+            <td></td>
+        </tr>
+        <tr>
+            <th></th>
+            <td></td>
+        </tr>
+        <tr>
+            <th></th>
+            <td></td>
+        </tr>
+    </table> 
+
+    <hr>
+    <button onclick="location.href='fleet.html'">Save</button>
+    <button onclick="location.href='fleet.html'">⬅ Back to Fleet</button>
+</div>
+
+<script src="js/api.js"></script>
+<script src="js/voidship.js"></script>
+</body>
+</html>
