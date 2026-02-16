@@ -22,8 +22,14 @@ body {
   border: 2px solid #444;
 }
 
+table {
+  overflow: visible;
+  width: 100%;
+}
+
 th, td {
   padding: 5px;
+  overflow: visible;
 }
 
 button {
@@ -50,3 +56,62 @@ button {
   border: 1px solid #d4af37;
   background: #333;
 }
+
+.fleet-item {
+  padding: 6px;
+  cursor: pointer;
+  border: 1px solid transparent;
+}
+
+.fleet-item:hover {
+  background: #2a2a2a;
+}
+
+.fleet-item.selected {
+  border: 1px solid #d4af37;
+  background: #333;
+}
+
+.ship-item {
+  padding: 6px;
+  cursor: pointer;
+  border: 1px solid transparent;
+}
+
+.ship-item:hover {
+  background: #2a2a2a;
+}
+
+.ship-item.selected {
+  border: 1px solid #d4af37;
+  background: #333;
+}
+
+
+
+// Units for ship customization
+.with-unit {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+.with-unit input {
+    padding-right: 45px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.with-unit::after {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    color: #666;
+}
+
+.unit-km::after { content: 'km'; }
+.unit-tons::after { content: 'tons'; }
+.unit-crew::after { content: 'crew'; }
+.unit-percent::after { content: '%'; }

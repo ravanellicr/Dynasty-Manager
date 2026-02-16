@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Fleet Manager</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+
+<div class="panel">
+    <h1>Fleet Management</h1>
+
+    <h3>Existing Voidships</h3>
+    <ul id="shipList"></ul>
+
+    <hr>
+    
+    <div class="section" style="text-align:center;">
+        <button onclick="createShip()">Create Voidship</button>
+        <button onclick="loadShip()">Load Voidship</button>
+        <button onclick="copyShip()">Copy Voidship</button>
+        <button onclick="deleteShip()">Delete Voidship</button>
+    </div>
+
+    <hr>
+    <button onclick="location.href='/fleets'">⬅ Back to Fleets</button>
+</div>
+
+<script src="/static/js/api.js"></script>
+<script src="/static/js/voidships.js"></script>
+</body>
+</html>

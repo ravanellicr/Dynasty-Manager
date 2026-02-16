@@ -40,7 +40,7 @@ async function copyDynasty() {
 
 async function deleteDynasty() {
   if (!selectedDynasty) return alert("Select a dynasty first");
-  await fetch(`http://127.0.0.1:8000/dynasties/delete/${selectedDynasty}`, { method: "DELETE" });
+  await fetch(`/dynasties/delete/${selectedDynasty}`, { method: "DELETE" });
   selectedDynasty = null;
   loadDynastyList();
 }
@@ -50,7 +50,10 @@ async function loadDynasty() {
 
   await apiPost(`/dynasties/activate/${selectedDynasty}`);
   localStorage.setItem("activeDynasty", selectedDynasty);
-  window.location.href = "dashboard.html";
+  window.location.href = "/dashboard";
 }
 
-loadDynastyList();
+/* ===============================
+   AUTO LOAD ON PAGE OPEN
+================================= */
+document.addEventListener("DOMContentLoaded", loadDynastyList);

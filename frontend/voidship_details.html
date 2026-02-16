@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Fleet Manager</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="/static/css/style.css">
 </head>
 <body>
 
@@ -16,90 +16,89 @@
     
     <hr>
     <h3>Voidship Stats</h3>
-    <table style="width:100%">
+    <table>
         <tr>
             <th>Voidship Name:</th>
-            <td>Variable</td>
+            <td><input type="text" id="voidship_name" placeholder="Enter Voidship Name"></td>
         </tr>
         <tr>
             <th>Hull:</th>
             <td>
-                <select id="hullSelect" onchange="loadHullData()">
-                    <option value="">-- Select Hull --</option>
+                <select id="hullSelect" style="width: 100%">
                 </select>
             </td>
         </tr>
         <tr>
             <th>Class:</th>
-            <td>Variable</td>
+            <td><span id="voidship_class">--</span></td>
         </tr>
         <tr>
             <th>Dimensions:</th>
-            <td>Variable</td>
+            <td><span id="voidship_dimensions">--</span></td>
         </tr>
         <tr>
             <th>Mass:</th>
-            <td>Variable</td>
+            <td><span id="voidship_mass">--</span></td>
         </tr>
         <tr>
             <th>Crew:</th>
-            <td>Variable</td>
+            <td><span id="voidship_crew">--</span></td>
         </tr>
         <tr>
             <th>Accelaration:</th>
-            <td>Variable</td>
+            <td><span id="voidship_acceleration">--</span></td>
         </tr>
         <tr>
             <th></th>
         </tr>
         <tr>
             <th>Speed:</th>
-            <td>Variable</td>
+            <td><span id="voidship_speed">--</span></td>
             <th>Manoeuvrability:</th>
-            <td>Variable</td>
+            <td><span id="voidship_manu">--</span></td>
             <th>Detection:</th>
-            <td>Variable</td>
+            <td><span id="voidship_detection">--</span></td>
         </tr>
         <tr>
             <th>Void Shields:</th>
-            <td>Variable</td>
+            <td><span id="voidship_shields">--</span></td>
             <th>Armour:</th>
-            <td>Variable</td>
+            <td><span id="voidship_armour">--</span></td>
             <th>Hull Integrity:</th>
-            <td>Variable</td>
+            <td><span id="voidship_integrity">--</span></td>
         </tr>
         <tr>
             <th>Morale:</th>
-            <td>Variable</td>
+            <td><input type="text" id="voidship_morale"></td>
             <th>Crew Population:</th>
-            <td>Variable</td>
+            <td><input type="text" id="voidship_population"></td>
             <th>Crew:</th>
-            <td>Variable</td>
+            <td><input type="text" id="voidship_cred"></td>
         </tr>
         <tr>
             <th>Turret Rating:</th>
-            <td>Variable</td>
+            <td><input type="text" id="voidship_turret"></td>
             <th>Weapon Capacity:</th>
-            <td colspan="3">Variable</td>
+            <td colspan="3"><input type="text" id="voidship_wp_cap" style="width: 100%"></td>
         </tr>
         <tr>
             <th>Space:</th>
-            <td>Variable</td>
+            <td><input type="text" id="voidship_space"></td>
             <th>Power:</th>
-            <td>Variable</td>
+            <td><input type="text" id="voidship_power"></td>
             <th>Ship Points:</th>
-            <td>Variable</td>
+            <td><input type="text" id="voidship_points"></td>
         </tr>
         <tr>
             <th></th>
         </tr>
         <tr>
             <th>Endeavours Bonus:</th>
-            <td>+Variable Military</td>
-            <td>+Variable Criminal</td>
-            <td>+Variable Exploration</td>
-            <td>+Variable Trade</td>
-            <td>+Variable Creed</td>
+            <td><input type="text" id="voidship_endevours_military"></td>
+            <td><input type="text" id="voidship_endevours_criminal"></td>
+            <td><input type="text" id="voidship_endevours_exploration"></td>
+            <td><input type="text" id="voidship_endevours_trade"></td>
+            <td><input type="text" id="voidship_endevours_creed"></td>
         </tr>
     </table>
 
@@ -248,11 +247,14 @@
     </table> 
 
     <hr>
-    <button onclick="location.href='fleet.html'">Save</button>
-    <button onclick="location.href='fleet.html'">⬅ Back to Fleet</button>
+    <div class="section" style="text-align:center;">
+        <button id="saveButton" onclick="saveShip()">Save Changes</button>
+        <button onclick="discardChanges()">Discard Changes</button>
+        <button onclick="goBack()">⬅ Back to Fleet</button>
+    </div>
 </div>
 
-<script src="js/api.js"></script>
-<script src="js/voidship.js"></script>
+<script src="/static/js/api.js"></script>
+<script src="/static/js/voidship_details.js"></script>
 </body>
 </html>

@@ -44,41 +44,61 @@ class Voidship(Base):
     """
     __tablename__ = "voidships"
     
+    # REQUIRED FIELDS ONLY
     id = Column(Integer, primary_key=True, index=True)
-    name = Column(String, nullable=False, index=True)
-    hull_type = Column(String, nullable=False)  # Ex: "Armageddon", "Lunar", etc.
     fleet_id = Column(Integer, ForeignKey("fleets.id"), nullable=False)
     
+    # ALL OTHER FIELDS SHOULD BE NULLABLE OR HAVE DEFAULTS
+    name = Column(String, nullable=True, default="Unnamed Voidship", index=True)  
+    hull_type = Column(String, nullable=True)  
+    
     # Estatísticas finais do voidship (calculadas e persistidas)
-    function_def =  Column(String, nullable=False)
-    category = Column(String, nullable=False)
-    length = Column(Integer, nullable=False)
-    width = Column(Integer, nullable=False)
-    mass = Column(Integer, nullable=False)
-    crew = Column(Integer, nullable=False)
-    acceleration = Column(Integer, nullable=False)
-    speed = Column(Integer, nullable=False)
-    detection = Column(Integer, nullable=False)
-    maneuver = Column(Integer, nullable=False)
-    hull_integrity = Column(Integer, nullable=False)
-    armor = Column(Integer, nullable=False)
-    turret = Column(Integer, nullable=False)
-    space = Column(Integer, nullable=False)
-    ship_point = Column(Integer, nullable=False)
+    function_def = Column(String, nullable=True)  
+    category = Column(String, nullable=True)  
+    length = Column(Integer, nullable=True, default=0)  
+    width = Column(Integer, nullable=True, default=0)  
+    mass = Column(Integer, nullable=True, default=0)  
+    crew = Column(Integer, nullable=True, default=0)  
+    acceleration = Column(Integer, nullable=True, default=0)  
+    speed = Column(Integer, nullable=True, default=0)  
+    detection = Column(Integer, nullable=True, default=0)  
+    maneuver = Column(Integer, nullable=True, default=0)  
+    hull_integrity = Column(Integer, nullable=True, default=0)  
+    armor = Column(Integer, nullable=True, default=0)  
+    turret = Column(Integer, nullable=True, default=0)  
+    space = Column(Integer, nullable=True, default=0)  
+    ship_point = Column(Integer, nullable=True, default=0)  
     
-    weapon_capacity_prow = Column(Integer, nullable=False)
-    weapon_capacity_port = Column(Integer, nullable=False)
-    weapon_capacity_starboard = Column(Integer, nullable=False)
-    weapon_capacity_dorsal = Column(Integer, nullable=False)
-    weapon_capacity_keel = Column(Integer, nullable=False)
+    weapon_capacity_prow = Column(Integer, nullable=True, default=0)  
+    weapon_capacity_port = Column(Integer, nullable=True, default=0)  
+    weapon_capacity_starboard = Column(Integer, nullable=True, default=0)  
+    weapon_capacity_dorsal = Column(Integer, nullable=True, default=0)  
+    weapon_capacity_keel = Column(Integer, nullable=True, default=0)  
     
-    endeavours_military = Column(Integer, nullable=False)
-    endeavours_criminal = Column(Integer, nullable=False)
-    endeavours_exploration = Column(Integer, nullable=False)
-    endeavours_trade = Column(Integer, nullable=False)
-    endeavours_creed = Column(Integer, nullable=False)
+    endeavours_military = Column(Integer, nullable=True, default=0)  
+    endeavours_criminal = Column(Integer, nullable=True, default=0)  
+    endeavours_exploration = Column(Integer, nullable=True, default=0)  
+    endeavours_trade = Column(Integer, nullable=True, default=0)  
+    endeavours_creed = Column(Integer, nullable=True, default=0)  
 
-    special = Column(String, nullable=False)
+    special = Column(String, nullable=True)  
+
+    """
+      Aqui a ideia é usar codigos id de duas partes como string para 
+      salvar os equipamento, por exemplo drive vai ser 1_4, 
+      1 > Id do drive 4 > Modificador simbolizando Best Quality
+    """
+
+    essential_plasma_drive = Column(String, nullable=True)  
+    essential_warp_drive = Column(String, nullable=True)  
+    essential_gellar_field = Column(String, nullable=True)  
+    essential_void_shield = Column(String, nullable=True)  
+    essential_ship_bridge = Column(String, nullable=True)  
+    essential_life_sustainer = Column(String, nullable=True)  
+    essential_crew_quarters = Column(String, nullable=True)  
+    essential_augur_array = Column(String, nullable=True)  
+
+    suplemental_components = Column(String, nullable=True)  
 
     # Relacionamento
     fleet = relationship("Fleet", back_populates="ships")

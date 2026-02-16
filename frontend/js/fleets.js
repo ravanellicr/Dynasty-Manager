@@ -1,69 +1,128 @@
 let selectedFleetId = null;
-let dynastyId = localStorage.getItem("selectedDynastyId");
 
+/* ===============================
+   LOAD FLEET LIST
+================================= */
 async function loadFleetList() {
-    const dynasties = await apiGet("/dynasties/");
-  const list = document.getElementById("dynastyList");
-  list.innerHTML = "";
 
-  dynasties.forEach(name => {
-    const li = document.createElement("li");
-    li.textContent = name;
-    li.classList.add("dynasty-item");
+    try {
+        const fleets = await apiGet("/fleets/");
+        const list = document.getElementById("fleetList");
+        list.innerHTML = "";
 
-    li.onclick = () => {
-      // Remove highlight from all
-      document.querySelectorAll(".dynasty-item").forEach(el => el.classList.remove("selected"));
+        fleets.forEach(fleet => {
+            const li = document.createElement("li");
+            li.textContent = `${fleet.name} (${fleet.ship_count} ships)`;
+            li.classList.add("fleet-item");
 
-      // Highlight this one
-      li.classList.add("selected");
+            li.onclick = () => selectFleet(li, fleet.id);
 
-      // Store selected
-      selectedDynasty = name;
-    };
+            list.appendChild(li);
+        });
 
-    list.appendChild(li);
-  });
+    } catch (error) {
+        console.error("Error loading fleets:", error);
+    }
 }
 
-function selectFleet(id, el) {
-    document.querySelectorAll(".fleet").forEach(s => s.classList.remove("selected"));
-    el.classList.add("selected");
-    selectedFleetId = id;
+
+/* ===============================
+   SELECT FLEET
+================================= */
+function selectFleet(element, fleetId) {
+
+    document.querySelectorAll(".fleet-item")
+        .forEach(el => el.classList.remove("selected"));
+
+    element.classList.add("selected");
+
+    selectedFleetId = fleetId;
+
+    localStorage.setItem("selectedFleetId", fleetId);
 }
 
-function createFleet() {
-    const name = prompt("Enter fleet name:");
+
+/* ===============================
+   CREATE FLEET
+================================= */
+async function createFleet() {
+
+    const name = prompt("Enter Fleet Name:");
     if (!name) return;
 
-    fetch(`${API}/ships/create`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-            dynasty_id: dynastyId,
-            name: name
-        })
-    }).then(loadFleets);
+    try {
+        await apiPost("/fleets/", { name });
+
+        selectedFleetId = null;
+        await loadFleetList();
+
+    } catch (error) {
+        alert("Error creating fleet.");
+        console.error(error);
+    }
 }
 
+
+/* ===============================
+   LOAD FLEET DETAIL
+================================= */
 function loadFleet() {
-    if (!selectedFleetId) return alert("Select a fleet first.");
-    window.location.href = `ship_detail.html?ship_id=${selectedFleetId}`;
+
+    if (!selectedFleetId)
+        return alert("Select a fleet first.");
+
+    window.location.href =
+        `/voidships?fleet_id=${selectedFleetId}`;
 }
 
-function copyFleet() {
-    if (!selectedFleetId) return alert("Select a fleet first.");
-    fetch(`${API}/ships/copy/${selectedFleetId}`, { method: "POST" })
-        .then(loadFleets);
+
+/* ===============================
+   COPY FLEET
+================================= */
+async function copyFleet() {
+
+    if (!selectedFleetId)
+        return alert("Select a fleet first.");
+
+    try {
+        await apiPost(`/fleets/${selectedFleetId}/copy`, {});
+        selectedFleetId = null;
+        await loadFleetList();
+
+    } catch (error) {
+        alert("Error copying fleet.");
+        console.error(error);
+    }
 }
 
-function deleteFleet() {
-    if (!selectedFleetId) return alert("Select a fleet first.");
-    fetch(`${API}/ships/${selectedFleetId}`, { method: "DELETE" })
-        .then(() => {
-            selectedFleetId = null;
-            loadFleets();
-        });
+
+/* ===============================
+   DELETE FLEET
+================================= */
+async function deleteFleet() {
+
+    if (!selectedFleetId)
+        return alert("Select a fleet first.");
+
+    if (!confirm("Are you sure you want to delete this fleet?"))
+        return;
+
+    try {
+        await apiDelete(`/fleets/${selectedFleetId}`);
+
+        selectedFleetId = null;
+        localStorage.removeItem("selectedFleetId");
+
+        await loadFleetList();
+
+    } catch (error) {
+        alert("Error deleting fleet.");
+        console.error(error);
+    }
 }
 
-loadFleets();
+
+/* ===============================
+   AUTO LOAD ON PAGE OPEN
+================================= */
+document.addEventListener("DOMContentLoaded", loadFleetList);

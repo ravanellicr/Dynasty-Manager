@@ -13,3 +13,19 @@ async function apiPost(path, data = {}) {
   });
   return await res.json();
 }
+
+async function apiPut(path, data = {}) {
+  const res = await fetch(API_BASE + path, {
+    method: "PUT",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(data)
+  });
+  return await res.json();
+}
+
+async function apiDelete(path) {
+  const res = await fetch(API_BASE + path, {
+    method: "DELETE"
+  });
+  return await res.json();
+}
